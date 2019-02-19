@@ -19,6 +19,7 @@ class CreateTodoTable extends Migration {
             $table->boolean('status')->default(false);
             $table->dateTime('completed_time');
             $table->timestamps();
+            $table->dateTime('deleted_at');
             $table->foreign('user_id')
                     ->references('id')->on('users')
                     ->onDelete('cascade');

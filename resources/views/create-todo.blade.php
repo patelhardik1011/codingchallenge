@@ -20,7 +20,7 @@
                         <input type="hidden" name="task_id" value="{{$todo['id']}}">
                         @endif
                         <div class="form-group">
-                            <textarea class="form-control" name="value" placeholder="Enter your text here">@if(isset($todo)){{$todo['value']}}@endif</textarea>
+                            <textarea class="form-control" name="value" required="required" placeholder="Enter your text here">@if(isset($todo)){{$todo['value']}}@endif</textarea>
                         </div>
                         <div class="form-group">
                             @if(isset($todo))
