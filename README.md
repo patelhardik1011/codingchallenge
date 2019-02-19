@@ -11,10 +11,7 @@ cd codechallenge
 ```
 composer install
 ```
-**Run npm install**
-```
-npm install
-```
+
 **Create .env**
 ```
 cp .env.example .env
@@ -42,5 +39,5 @@ php artisan migrate
 ## PHPUnit Test
 To run the unit test, go to the project root and run
 ```
-phpunit
+vendor\bin\phpunit
 ```
