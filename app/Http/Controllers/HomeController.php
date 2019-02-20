@@ -29,7 +29,7 @@ class HomeController extends Controller {
         $temp_time = new \DateTime('now');
         $time_arr = [];
         $todo_count_arr = [];
-        for ($i = 0; $i < 12; $i++) {
+        for ($i = 0; $i < 60; $i++) {
             $cloned = clone $temp_time;
             $temp_time->modify('-1 minutes');
             $todos_count = Todo::whereBetween('created_at', [$temp_time, $cloned])->where('completed_time', NULL)->count();

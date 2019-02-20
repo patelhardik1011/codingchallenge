@@ -3,8 +3,8 @@
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
-        <div class="col-md-8">
-            <canvas id="myChart" width="300" height="300"></canvas>
+        <div class="col-md-12">
+            <canvas id="myChart" width="800" height="300"></canvas>
             <div class="row">
                 <div class="col-md-12 text-right">
                     <a class="btn btn-primary" href="{{route('create-todo')}}">Create new todo</a>

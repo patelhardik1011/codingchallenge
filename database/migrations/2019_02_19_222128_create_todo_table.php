@@ -17,9 +17,9 @@ class CreateTodoTable extends Migration {
             $table->string('value');
             $table->unsignedInteger('user_id');
             $table->boolean('status')->default(false);
-            $table->dateTime('completed_time');
+            $table->dateTime('completed_time')->nullable();
             $table->timestamps();
-            $table->dateTime('deleted_at');
+            $table->softDeletes();
             $table->foreign('user_id')
                     ->references('id')->on('users')
                     ->onDelete('cascade');
